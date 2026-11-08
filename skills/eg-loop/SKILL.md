@@ -1,6 +1,6 @@
 ---
 name: eg-loop
-description: "Autonomously implement an approved PRD story-by-story with the elephant/goldfish workflow — one fresh implementer subagent per story, goldfish design check, independent review loop, test gate, commit to a feature branch. Pauses and escalates instead of guessing."
+description: "(Experimental) Autonomously implement an approved PRD story-by-story with the elephant/goldfish workflow — one fresh implementer subagent per story, goldfish design check, independent review loop, test gate, commit to a feature branch. Pauses and escalates instead of guessing."
 argument-hint: "<path to PRD .md | path to prd.json | \"resume\">"
 disable-model-invocation: true
 ---
@@ -71,7 +71,7 @@ Repeat until every story has `passes: true`, the batch limit is hit, or a gate t
 
 **Step 4 — Implement.** `SendMessage` the implementer: implement per the design note, run the project's lint / type-check / unit tests, and report files touched + gate output. It must not commit and must not edit `prd.json`.
 
-**Step 5 — Independent review.** Run the `/eg-precommit-review` loop exactly as specified in the `eg-precommit-review` skill (`~/.claude/skills/eg-precommit-review/SKILL.md`) Steps 2–5, with two differences: (a) you hand findings to the implementer via `SendMessage` to fix or rebut instead of fixing them yourself; (b) the reviewer focus line is `Additionally focus on: story <id> — <title>; acceptance criteria: <list>`. Read the reviewer template from that file between its markers every time — do not paraphrase it. Write the ledger to `reviews/<id>.md`. The **R5 cap is an escalation gate**: pause, do not accept on the user's behalf.
+**Step 5 — Independent review.** Run the `/eg-precommit-review` loop exactly as specified in the `eg-precommit-review` skill (`../eg-precommit-review/SKILL.md`, relative to this skill's base directory — resolves the same for global-skill and plugin installs) Steps 2–5, with two differences: (a) you hand findings to the implementer via `SendMessage` to fix or rebut instead of fixing them yourself; (b) the reviewer focus line is `Additionally focus on: story <id> — <title>; acceptance criteria: <list>`. Read the reviewer template from that file between its markers every time — do not paraphrase it. Write the ledger to `reviews/<id>.md`. The **R5 cap is an escalation gate**: pause, do not accept on the user's behalf.
 
 **Step 6 — Verify and commit (you, not the implementer).**
 1. Run the test gate yourself, each command separately: unit/integration, type-check, lint, and E2E if the diff touches UI/API and the project has E2E. Read the output — do not trust the implementer's report.
