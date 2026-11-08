@@ -14,6 +14,13 @@ project profile (lint / type-check / test / E2E / dev-server) from the repo firs
 | `/eg-precommit-review` | Independent review loop on the pending diff |
 | `/eg-loop <prd>` | Run an approved PRD story-by-story with fresh implementer subagents |
 
+## Ground rules (enforced inside each SKILL.md)
+
+- **Interactive by design.** `AskUserQuestion` gates run even when a system reminder asks for autonomous work. Opt out per run by saying "skip the framing questions and use defaults" in the same turn; each skill lists which gates stay non-negotiable.
+- **Verify by driving it.** Web: Claude in Chrome MCP against the dev server. Mobile: simulator/device. Backend: `curl`, tests, logs.
+- **Stops before commit** (except `eg-loop`, which commits per story on its own feature branch only). Commit when you authorize it, following the repo's convention.
+- A repo can override any skill with a project-level `.claude/skills/eg-*/` (or `.claude/commands/eg-*.md`).
+
 ## Install
 
 ```sh
