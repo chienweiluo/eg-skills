@@ -1,7 +1,7 @@
 ---
 name: eg-new-feature
-description: Build a new feature using the elephant/goldfish workflow — design doc, goldfish design check, implement, review, validate
-argument-hint: feature description (what the user wants and why)
+description: "Build a new feature using the elephant/goldfish workflow — design doc, goldfish design check, implement, review, validate"
+argument-hint: "feature description (what the user wants and why)"
 ---
 
 Build a new feature using the elephant/goldfish workflow. The aim: design before code, let a fresh goldfish stress-test the design doc, then implement, review, and validate.

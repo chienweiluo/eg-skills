@@ -1,7 +1,7 @@
 ---
 name: eg-precommit-review
-description: Run the pre-commit independent-reviewer loop on the current branch's pending changes
-argument-hint: [optional focus area or files to emphasize]
+description: "Run the pre-commit independent-reviewer loop on the current branch's pending changes"
+argument-hint: "[optional focus area or files to emphasize]"
 ---
 
 Run the pre-commit review loop. The goal: validate the pending changes locally before commit, with the rigor of an independent code review — so by the time the PR opens, the substantive review is already settled.

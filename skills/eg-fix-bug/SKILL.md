@@ -1,7 +1,7 @@
 ---
 name: eg-fix-bug
-description: Fix a bug using the elephant/goldfish workflow — problem doc, goldfish diagnosis check, failing test, fix, review, validate
-argument-hint: bug description, GitHub issue URL, or symptom + repro
+description: "Fix a bug using the elephant/goldfish workflow — problem doc, goldfish diagnosis check, failing test, fix, review, validate"
+argument-hint: "bug description, GitHub issue URL, or symptom + repro"
 ---
 
 Fix a bug using the elephant/goldfish workflow. The aim: write a problem doc, goldfish-check the diagnosis (so we are not anchored to the first hypothesis), capture the bug as a failing test, fix it, then run `/eg-precommit-review` and the test gate.

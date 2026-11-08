@@ -1,7 +1,7 @@
 ---
 name: eg-loop
-description: Autonomously implement an approved PRD story-by-story with the elephant/goldfish workflow — one fresh implementer subagent per story, goldfish design check, independent review loop, test gate, commit to a feature branch. Pauses and escalates instead of guessing.
-argument-hint: <path to PRD .md | path to prd.json | "resume">
+description: "Autonomously implement an approved PRD story-by-story with the elephant/goldfish workflow — one fresh implementer subagent per story, goldfish design check, independent review loop, test gate, commit to a feature branch. Pauses and escalates instead of guessing."
+argument-hint: "<path to PRD .md | path to prd.json | \"resume\">"
 disable-model-invocation: true
 ---
 
