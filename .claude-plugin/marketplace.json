@@ -1,0 +1,5 @@
+{
+  "name": "eg-skills",
+  "owner": { "name": "chienweiluo" },
+  "plugins": [{ "name": "eg-skills", "source": "./", "description": "Elephant/goldfish workflow skills" }]
+}

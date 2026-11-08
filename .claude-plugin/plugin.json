@@ -1,0 +1,6 @@
+{
+  "name": "eg-skills",
+  "version": "1.0.0",
+  "description": "Elephant/goldfish workflow skills: brainstorm, PRD, new feature, bug fix, pre-commit review, PRD loop",
+  "author": { "name": "chienweiluo" }
+}
